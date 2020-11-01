@@ -36,11 +36,11 @@ function setup() {
 	}
 	//rope1 = Constraint.create(options); */
 
-	rope1 = new rope (bob1.body, roof1.body, 0, 0);
-	rope2 = new rope (bob2.body, roof1.body, -70, 0);
-	rope3 = new rope (bob3.body, roof1.body, 70, 0);
-	rope4 = new rope (bob4.body, roof1.body, -70*2, 0);
-	rope5 = new rope (bob5.body, roof1.body, 70*2, 0);
+	rope1 = new rope (bob1.body, roof1.body, {x:400, y:100});
+	rope2 = new rope (bob2.body, roof1.body, {x:330, y:100});
+	rope3 = new rope (bob3.body, roof1.body, {x:470, y:100});
+	rope4 = new rope (bob4.body, roof1.body, {x:260, y:100});
+	rope5 = new rope (bob5.body, roof1.body, {x:540, y:100});
 
 
   
@@ -84,7 +84,7 @@ function keyPressed(){
 
 		console.log("works");
 
-		Matter.Body.applyForce(bob4.body, bob4.body.position, {x:-100, y:-100});
+		Matter.Body.applyForce(bob4.body, bob4.body.position, {x:-40, y:-40});
 
 	}
 }

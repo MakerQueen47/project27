@@ -4,12 +4,12 @@ class bob {
             // constructor function is invoked everytime we create an object from 'this' class! 
         var options= {
 
-            restitution:0.0,
-            density:1.2
+            restitution:1,
+            density:0.8
 
         }
 
-        this.body = Bodies.circle(x,y,diameter,options);
+        this.body = Bodies.circle(x,y,diameter/2,options);
         World.add(world, this.body);
         this.r = diameter/2;
 
@@ -22,11 +22,11 @@ class bob {
         var pos = this.body.position;
 
        push();
-       strokeWeight(2);
-	   stroke("blue");
+       //strokeWeight(2);
+	   //stroke("red");
 	   fill("red");
+       translate(pos.x,pos.y);
        rotate(angle);
-        translate(pos.x,pos.y);
      
         ellipseMode(RADIUS);
         ellipse(0, 0, this.r);
